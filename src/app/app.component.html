@@ -19,21 +19,21 @@
 </style>
 <table>
   <tr>
-    <td>First Name:</td>
-    <td></td>
+    <td>Sr.</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Age</td>
+    <td>Email</td>
   </tr>
-  <tr>
-    <td>Last Name:</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>email:</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>age:</td>
-    <td></td>
-  </tr>
+  <ng-container *ngFor="let user of usersList; let index=index">
+    <tr>
+      <td>{{index+1}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </ng-container>
 </table>
 <!-- <br>
 <br>
